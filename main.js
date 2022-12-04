@@ -57,35 +57,37 @@ const level = document.querySelectorAll("#niveles .nivel").forEach((e) => {
         const botones = document.querySelectorAll("#letras div p .letra");
         botones.forEach((e) => {
             e.addEventListener("click", () => {
-                // Evita la interacción con los elementos de la partida (los botones con las letras)
-                if (vidas != 0 && !partida_ganada) {
-                    let acierto = false;
-                    // Se recorre la cadena que contiene la palabra a acertar 'palabra_generada' y se añade o no el valor de 
-                    // la tecla que contiene el evento 'e' a la palabra sin rellenar 'palabra_generada_incompleta'
-                    for (let i in palabra_generada) {
-                        if (e.innerHTML == palabra_generada[i]) {
-                            palabra_generada_incompleta[i] = e.innerHTML;
-                            acierto = true;
+                if (!e.hasAttribute("disabled")) {
+                    // Evita la interacción con los elementos de la partida (los botones con las letras)
+                    if (vidas != 0 && !partida_ganada) {
+                        let acierto = false;
+                        // Se recorre la cadena que contiene la palabra a acertar 'palabra_generada' y se añade o no el valor de 
+                        // la tecla que contiene el evento 'e' a la palabra sin rellenar 'palabra_generada_incompleta'
+                        for (let i in palabra_generada) {
+                            if (e.innerHTML == palabra_generada[i]) {
+                                palabra_generada_incompleta[i] = e.innerHTML;
+                                acierto = true;
+                            }
                         }
+                        // Se comprueba si no ha habido ningún acierto tras recorrer toda la cadena
+                        if (!acierto) {
+                            vidas -= 1;
+                            cambiaImagen(vidas);
+                            e.nextElementSibling.classList.add("cruz-d");
+                            e.nextElementSibling.nextElementSibling.classList.add("cruz-i");
+                        } else {
+                            e.classList.add("circulo");
+                        }
+                        // Se deshabilita la tecla pulsada que ha creado el evento 'e' y se cambia el color y el fondo para que
+                        // sea reconocible que no se puede pulsar
+                        e.classList.remove("hover");
+                        e.setAttribute("disabled", "disabled");
+                        // Se escribe el estado actual de la palabra (mirar función)
+                        escribePalabra();
+                        // comprobamos si es fin de partida
+                        comprobarVictoria();
+                        comprobarVidas();
                     }
-                    // Se comprueba si no ha habido ningún acierto tras recorrer toda la cadena
-                    if (!acierto) {
-                        vidas -= 1;
-                        cambiaImagen(vidas);
-                        e.nextElementSibling.classList.add("cruz-d");
-                        e.nextElementSibling.nextElementSibling.classList.add("cruz-i");
-                    } else {
-                        e.classList.add("circulo");
-                    }
-                    // Se deshabilita la tecla pulsada que ha creado el evento 'e' y se cambia el color y el fondo para que
-                    // sea reconocible que no se puede pulsar
-                    e.classList.remove("hover");
-                    e.setAttribute("disabled", "disabled");
-                    // Se escribe el estado actual de la palabra (mirar función)
-                    escribePalabra();
-                    // comprobamos si es fin de partida
-                    comprobarVictoria();
-                    comprobarVidas();
                 }
             });
         });
