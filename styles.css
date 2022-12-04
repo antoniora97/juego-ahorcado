@@ -1,0 +1,193 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Schoolbell', cursive;
+}
+
+@keyframes desaparecer {
+    0% {
+        transform: translateX(0em);
+        opacity: 1;
+    }
+    50% {
+        transform: translateX(-10em);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateX(-20em);
+        opacity: 0;
+    }
+}
+
+#niveles h1 {
+    text-align: center;
+}
+
+#niveles p {
+    margin-top: 1em;
+}
+
+#niveles ul {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+#niveles ul li {
+    padding: 0.5em;
+    transition: 0.3s;
+}
+
+#niveles ul li:hover {
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+main {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4em;
+    position: relative;
+}
+
+#palabra p {
+    font-size: 1.5em;
+}
+
+#vidas {
+    width: 4em;
+    height: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+#vidas p {
+    font-size: 1.5em;
+}
+
+#corazon {
+    animation: latido 2s linear infinite
+}
+
+@keyframes latido {
+    0% {
+        transform: scale(1.0);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+    100% {
+        transform: scale(1.0);
+    }
+}
+
+#ahorcado {
+    display: flex;
+    align-self: flex-start;
+}
+
+#letras {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+@keyframes disolver {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+#letras div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+#letras div p {
+    position: relative;
+}
+
+#letras div .letra {
+    width: 1.4em;
+    height: 1.4em;
+    line-height: 1.4em;
+    font-size: 1.4em;
+    display: inline-block;
+    text-align: center;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.hover:hover {
+    animation: meneo 1s linear infinite;
+}
+
+.cruz-d {
+    background-color: red;
+    display: inline-block;
+    width: 2.3em;
+    height: 0.1em;
+    position: absolute;
+    top: 0.1em;
+    left: 0.2em;
+    transform: rotate(45deg);
+    transform-origin: left;
+}
+
+.cruz-i {
+    background-color: red;
+    display: inline-block;
+    width: 2.3em;
+    height: 0.1em;
+    position: absolute;
+    top: 0.1em;
+    right: 0.2em;
+    transform: rotate(-45deg);
+    transform-origin: right;
+}
+
+.circulo {
+    border: 1px solid blue;
+    border-radius: 1.4em;
+}
+
+@keyframes meneo {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}

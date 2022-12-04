@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="158.33333pt" height="138.88889pt" viewBox="0 0 158.33333 138.88889">
+<g enable-background="new">
+<path transform="matrix(2.7777777,0,0,-2.7777777,0,138.88889)" d="M 0 50 L 57 50 L 57 0 L 0 0 L 0 50 Z " fill="#ffffff"/>
+<path transform="matrix(2.7777777,0,0,-2.7777777,11.111111,141.66666)" d="M 0 1 L 53 1 L 53 3 L 0 3 L 0 1 Z " fill="#986517"/>
+<path transform="matrix(2.7777777,0,0,-2.7777777,0,22.222222)" d="M 0 2 L 46 2 L 46 4 L 0 4 L 0 2 Z " fill="#986517"/>
+<path transform="matrix(2.0598224,-1.8636471,-1.8636471,-2.0598224,36.10418,79.07816)" d="M 0 14.901337 L 20 14.901337 L 20 16.901337 L 0 16.901337 L 0 14.901337 Z " fill="#986517"/>
+<path transform="matrix(0,2.7777777,2.7777777,0,-127.77777,0)" d="M 0 50 L 50 50 L 50 52 L 0 52 L 0 50 Z " fill="#986517"/>
+<path transform="matrix(0,2.7777777,2.7777777,0,50,13.888888)" d="M 0 11 L 11 11 L 11 12 L 0 12 L 0 11 Z "/>
+<path transform="matrix(2.7777777,0,0,-2.7777777,69.44444,69.44444)" d="M 10 5 C 10 2.238576 7.761424 0 5 0 C 2.238576 0 0 2.238576 0 5 C 0 7.761424 2.238576 10 5 10 C 7.761424 10 10 7.761424 10 5 Z "/>
+<path transform="matrix(0,2.7777777,2.7777777,0,41.666666,66.666667)" d="M 0 14 L 14 14 L 14 16 L 0 16 L 0 14 Z "/>
+<path transform="matrix(1.6666694,-2.2222195,-2.2222195,-1.6666694,85.77775,106.00003)" d="M 0 8.599998 L 10.000012 8.599998 L 10.000012 9.599998 L 0 9.599998 L 0 8.599998 Z "/>
+</g>
+</svg>
